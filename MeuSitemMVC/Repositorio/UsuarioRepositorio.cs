@@ -1,4 +1,5 @@
 ﻿using MeuSitemMVC.Data;
+using MeuSitemMVC.Migrations;
 using MeuSitemMVC.Models;
 
 
@@ -25,10 +26,17 @@ namespace MeuSitemMVC.Repositorio
 
         public UsuarioModel Add(UsuarioModel user)
         {
+
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
             //Record in DataBase
+            //O problema ta aqui!!!!!  
             user.DataCadastro = DateTime.Now;
             _dataBaseContext.Usuario.Add(user);
             _dataBaseContext.SaveChanges();
+
             return user;
         }
 

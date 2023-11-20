@@ -1,20 +1,18 @@
-﻿@using MeuSitemMVC.Enums;
+@using MeuSitemMVC.Enums;
 @model UsuarioModel
 
 @{
-    ViewData["Title"] = "Create new user";
+    ViewData["Title"] = "Edit User";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Register new user</h1>
+    <h1 class="display-4">User Edit</h1>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<form asp-controller="Usuario" asp-action="Editar" method="post">
 
-<form asp-controller="Usuario" asp-action="Criar" method="post">
+    <input type="hidden" asp-for="Id" />
 
-    <input type="hidden" asp-for="Id"/>
     <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Username">
@@ -40,21 +38,10 @@
             @Html.ValidationMessageFor(x => x.Perfil)
         </select>
     </div>
-    <div class="form-group">
-        <label for="Senha">Password</label>
-        <input type="text" asp-for="Senha" class="form-control" placeholder="password">
-        @Html.ValidationMessageFor(x => x.Senha)
-    </div>
 
-    <br/>
+    <button type="submit" class="btn btn-primary btn-btn-block" asp-controller="Usuario" asp-action="Editar">Edit</button>
+    <a class="btn btn-secondary btn-btn-block" role="button" asp-controller="Usuario" asp-action="Index">Back</a>
 
-    <button type="submit" class="btn btn-primary btn-block" role="button">Register</button>
-    <a class="btn btn-secondary btn-block" role="button" asp-controller="Usuario" asp-action="Index">Back</a>
 </form>
 
-<script type="text/javascript">
-    //Cria uma máscara para o campo celular
-    $('#Celular').mask('(99) 99999-9999');
-</script>
- 
 
