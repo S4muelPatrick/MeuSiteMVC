@@ -15,12 +15,7 @@ namespace MeuSitemMVC.Controllers
 
         public IActionResult Index()
         {
-            HomeModel home = new HomeModel();
-            
-            home.Nome = "Samuel Patrick Lopes de Oliveria";
-            home.Email = "samuel.patrick@gmail.com";
-
-            return View(home);
+            return View();
         }
 
         public IActionResult Privacy()

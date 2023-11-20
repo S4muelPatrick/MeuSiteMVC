@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MeuSitemMVC.Models
 {
-    public class UsuarioModel
+    //Classe criada para a edição *não editamos a senha do user junto com os demais dados*
+    public class UsuarioSemSenhaModel
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "Enter user name!")]
@@ -15,10 +16,6 @@ namespace MeuSitemMVC.Models
         public string Email { get; set; }
         [Required(ErrorMessage = "Enter user position!")]
         public PerfilEnum? Perfil { get; set; }
-        [Required(ErrorMessage = "You must enter you password!")]
-        public string Senha { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime? DataAlteracao { get; set; }
 
     }
 }
