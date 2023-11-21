@@ -1,4 +1,5 @@
 ﻿using MeuSitemMVC.Data;
+using MeuSitemMVC.Migrations;
 using MeuSitemMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,10 @@ namespace MeuSitemMVC.Repositorio
 
         public ContatoModel Add(ContatoModel contato)
         {
+            if (contato == null)
+            {
+                throw new ArgumentNullException(nameof(contato));
+            }
             //Record in DataBase
             contato.Celular = contato.Celular
                 .Replace(" ", "")
