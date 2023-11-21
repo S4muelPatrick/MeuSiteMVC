@@ -4,19 +4,14 @@
 }
 
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-    <script src="@Url.Content("C:/Users/sp469/source/repos/MeuSitemMVC/MeuSitemMVC/wwwroot/js/site.js")"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="@Url.Content("C:/Users/sp469/source/repos/MeuSitemMVC/MeuSitemMVC/wwwroot/js/site.js")"></script>
 </head>
 
 <div class="text-center">
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Usuario" asp-action="Criar">Add new user</a>
+        <a class="btn btn-primary" role="button" asp-controller="Usuario" asp-action="Criar">Add user</a>
     </div>
-
- 
-</div>
 
     @if (TempData["SuccessMessage"] != null)
     {
@@ -40,16 +35,14 @@
 
     <h1 class="display-4">Listagem de usuários</h1>
    
-    <table class="table" id="table-usuarios">
+    <table class="table" id="table-usuarios" style="width:100%">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">LogIn</th>
                 <th scope="col">Email</th>
-                <th scope="col">Perfil</th>
-                <th scope="col">Data de cadastro</th>
-                <th scope="col"></th>
+                <th scope="col">Data de cadastro</th>             
             </tr>
         </thead>
        
@@ -64,9 +57,7 @@
                         <td>@user.Nome</td>
                         <td>@user.Login</td>
                         <td>@user.Email</td>
-                        <td>@(user.Perfil == MeuSitemMVC.Enums.PerfilEnum.Admin ? "Admin" : "Default")</td>
                         <td>@user.DataCadastro</td>
-                        <td>@user.Email</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <!-- O asp-router-id serve para derecionarmos o id específico  -->
@@ -82,8 +73,6 @@
                 <br/>
                 <tr class="odd"><td valign="top" colspan="5">Nenhum usuário foi encontrado</td></tr>
             }
-
-           
         </tbody>
     </table>
 </div>

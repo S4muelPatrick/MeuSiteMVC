@@ -74,8 +74,7 @@ namespace MeuSitemMVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Perfil")
-                        .HasColumnType("int")
-                        .HasColumnName("Perfil");
+                        .HasColumnType("int");
 
                     b.Property<string>("Senha")
                         .IsRequired()

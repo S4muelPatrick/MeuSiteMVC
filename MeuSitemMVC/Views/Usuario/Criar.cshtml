@@ -14,7 +14,6 @@
 
 <form asp-controller="Usuario" asp-action="Criar" method="post">
 
-    <input type="hidden" asp-for="Id"/>
     <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Username">
@@ -26,22 +25,20 @@
         @Html.ValidationMessageFor(x => x.Email)
     </div>
     <div class="form-group">
-        <label for="Login">Login</label>
+        <label for="exampleInputEmail1">Login</label>
         <input type="text" asp-for="Login" class="form-control" placeholder="login">
         @Html.ValidationMessageFor(x => x.Login)
     </div>
-
     <div class="form-group">
-        <label for="email">Perfil</label>
+        <label for="exampleInputEmail1">Perfil</label>
         <select asp-for="Perfil" class="form-control">
-            <option value="">Select</option>
-            <option value="@PerfilEnum.Admin">Administrator</option>
-            <option value="@PerfilEnum.Padrao">Default</option>
-            @Html.ValidationMessageFor(x => x.Perfil)
+            <option value="=0">Select</option>
+            <option value="=@PerfilEnum.Admin">Administrator</option>
+            <option value="=@PerfilEnum.Padrao">Default</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="Senha">Password</label>
+        <label for="exampleInputEmail1">Password</label>
         <input type="text" asp-for="Senha" class="form-control" placeholder="password">
         @Html.ValidationMessageFor(x => x.Senha)
     </div>

@@ -24,11 +24,6 @@ namespace MeuSitemMVC.Data
             modelBuilder.Entity<UsuarioModel>()
                           .Property(c => c.Id)
                           .ValueGeneratedOnAdd();
-            modelBuilder.Entity<UsuarioModel>()
-                          .Property(c => c.Perfil)
-                          .IsRequired()
-                          .HasColumnName("Perfil")
-                          .HasConversion<int>();
         }
 
         public DbSet<ContatoModel> Contato { get; set; }
