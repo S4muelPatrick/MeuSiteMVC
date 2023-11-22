@@ -2,12 +2,16 @@
     font-size: 14px;
     overflow-x: hidden;
     margin: 0;
-    
+    padding:0;
 }
 
 :root {
     --hue1: 258;
     --var-principal-color: hsl(var(--hue1) 24% 14%);
+    --letter-higher: 20px;
+    --nav-spacemente: 10px;
+    --border-radius-nav: 20px;
+    --font-weight: 800;
 }
 
 body {
@@ -15,25 +19,87 @@ body {
 }
 
 .container{
-    margin:0 10px;
-}
-
-#nav {
-    height:3vw;
-    background:blue;
+    padding:0 10px;
 }
 
 a{
     text-decoration:none;
+    color:white;
+    font-size:var(--letter-higher);
 }
 
-.nav ul{
-    display:flex;
-    float:right;
+/*---- Navigation bar ----*/
+
+#nav {
+    display: grid;
+    grid-row: auto;
+    align-content: center;
+    height: 5vw;
+    
 }
+
+nav ul:last-child {
+    display: flex;
+    float: right;
+
+}
+
+nav ul:first-child {
+    display: flex;
+    float: left;
+}
+
+nav ul:last-child li a {
+    background: #00FF88;
+    margin: 0 5px;
+    padding: var(--nav-spacemente) var(--nav-spacemente);
+    color: var(--var-principal-color);
+    text-transform: uppercase;
+    font-weight: var(--font-weight);
+    transition: 0.3s;
+}
+
+nav ul:last-child li a:hover {
+    background: none;
+    box-shadow: inset 0px 0px 5px 1px #00FF88;
+    color: #00FF88;
+}
+
+nav ul:last-child li:first-child a {
+    border-radius: var(--border-radius-nav) 0px 0px var(--border-radius-nav);
+}
+
+nav ul:last-child li:last-child a {
+    border-radius: 0px var(--border-radius-nav) var(--border-radius-nav) 0px;
+}
+
+nav ul:last-child li {
+    padding: var(--nav-spacemente) 0px;
+}
+
+nav ul:first-child li a {
+    margin: 0 2px;
+    padding: var(--nav-spacemente) var(--nav-spacemente);
+    text-transform: uppercase;
+    font-weight: var(--font-weight);
+    transition:0.5s;
+}
+
+nav ul:first-child li a:hover {
+    border-radius: var(--border-radius-nav);
+    box-shadow: inset 0px 0px 5px 1px #00FF88;
+}
+
+nav ul:first-child li {
+    margin: 0 var(--nav-spacemente);
+    padding: var(--nav-spacemente) var(--nav-spacemente);
+}
+
+/*---- end of Navigation bar ----*/
+
 
 .field-validation-error{
-    color: #e01d1d; 
+    color: #e01d1d;
 }
 
 .close-alert{
@@ -95,7 +161,7 @@ a{
 
     .card-login > h1 {
         color: #00ff88;
-        font-weight: 800;
+        font-weight: var(--font-weight);
         margin: 0;
     }
 
@@ -138,7 +204,7 @@ a{
     border-radius: 8px;
     outline: none;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: var(--font-weight);
     letter-spacing: 3px;
     color: #2b134b;
     background: #00ff88;

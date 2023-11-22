@@ -7,27 +7,45 @@
 </head>
 
 <body>
+
     <div class="main-login">
+
         <div class="left-login">
+
             <h1>Faça Login<br>E entre para o nosso time</h1>
             <img src="C:\Users\sp469\Source\Repos\S4muelPatrick\MeuSiteMVC\MeuSitemMVC\wwwroot\css\tecnology.svg" class="left-login-img" alt="Tecnology animação">
+        
         </div>
+
         <div class="right-login">
+
             <div class="card-login">
+
                 <h1>Login</h1>
+
                 <div class="textfield">
+
                     <label for="usuario">Usuário</label>
                     <input type="text" asp-for="User" class="form-control" placeholder="User">
                     @Html.ValidationMessageFor(x => User)
+
                 </div>
+
                 <div class="textfield">
+
                     <label for="usuario">Senha</label>
                     <input type="Password" asp-for="Password" class="form-control" placeholder="password">
                     @Html.ValidationMessageFor(x => x.Password)
+                
                 </div>
+
                 <button type="submit" class="btn-login" role="button" asp-controller="Home" asp-action="Index">Login</button>
             </div>
+
         </div>
+
     </div>
 
+<form>
 </form>
+</body>

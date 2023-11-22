@@ -13,10 +13,13 @@
 <body>
     <header>
         <nav id="nav" class="container">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MeuSitemMVC</a>
+            <div>
+                <ul>
+                    <li>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MeuSitemMVC</a>
+                    </li>
+                </ul>
                 
-                <div class="nav">
                     <ul>
                         <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Página Inicial</a>
@@ -59,8 +62,6 @@
     <!-- DataTables JS -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 
-
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
