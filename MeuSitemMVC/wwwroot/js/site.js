@@ -1,8 +1,8 @@
 ﻿//Write your JavaScript code.
 
 $(document).ready(function () {
-    getDataTable("#table-contatos");
     getDataTable("#table-usuarios");
+    getDataTable("#table-contatos");
 });
 
 function getDataTable(id) {

@@ -1,4 +1,4 @@
-﻿
+﻿@model LoginModel
 
 
 <head>
@@ -6,7 +6,7 @@
     <script src="@Url.Content("C:/Users/sp469/source/repos/MeuSitemMVC/MeuSitemMVC/wwwroot/js/site.js")"></script>
 </head>
 
-<body>
+<form asp-controller="Contato" asp-action="Criar" method="post">
     <div class="main-login">
         <div class="left-login">
             <h1>Faça Login<br>E entre para o nosso time</h1>
@@ -17,15 +17,17 @@
                 <h1>Login</h1>
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="User   ">
+                    <input type="text" asp-for="User" class="form-control" placeholder="User">
+                    @Html.ValidationMessageFor(x => User)
                 </div>
                 <div class="textfield">
                     <label for="usuario">Senha</label>
-                    <input type="password" name="Senha" placeholder="password">
+                    <input type="Password" asp-for="Password" class="form-control" placeholder="password">
+                    @Html.ValidationMessageFor(x => x.Password)
                 </div>
-                <button class="btn-login">Login</button>
+                <button type="submit" class="btn-login" role="button" asp-controller="Home" asp-action="Index">Login</button>
             </div>
         </div>
     </div>
 
-</body>
+</form>
