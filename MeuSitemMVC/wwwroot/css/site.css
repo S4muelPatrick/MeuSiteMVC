@@ -1,20 +1,33 @@
-html {
-  font-size: 14px;
+* {
+    font-size: 14px;
+    overflow-x: hidden;
+    margin: 0;
+    
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+    --hue1: 258;
+    --var-principal-color: hsl(var(--hue1) 24% 14%);
 }
 
 body {
-  margin-bottom: 60px;
+    background: var(--var-principal-color);
+}
+
+.container{
+    margin:0 10px;
+}
+
+#nav {
+    display:flex; 
+}
+
+a{
+    text-decoration:none;
+}
+
+.nav ul{
+    display:flex;
 }
 
 .field-validation-error{
@@ -32,19 +45,9 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-    body * {
-        box-sizing: border-box;
-    }
-
 .main-login {
     width: 100vw;
     height: 100vh;
-    background-color: #201b2c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,4 +177,3 @@ body {
         width: 90%;
     }
 }
-
