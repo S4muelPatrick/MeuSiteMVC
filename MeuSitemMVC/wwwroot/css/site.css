@@ -19,7 +19,8 @@ body {
 }
 
 #nav {
-    display:flex; 
+    height:3vw;
+    background:blue;
 }
 
 a{
@@ -28,6 +29,7 @@ a{
 
 .nav ul{
     display:flex;
+    float:right;
 }
 
 .field-validation-error{
