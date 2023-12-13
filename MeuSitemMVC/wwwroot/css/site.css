@@ -3,6 +3,7 @@
     overflow-x: hidden;
     margin: 0;
     padding:0;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -50,19 +51,18 @@ nav ul:first-child {
 }
 
 nav ul:last-child li a {
-    background: #00FF88;
+    background: white;
     margin: 0 5px;
     padding: var(--nav-spacemente) var(--nav-spacemente);
     color: var(--var-principal-color);
-    text-transform: uppercase;
     font-weight: var(--font-weight);
-    transition: 0.3s;
+    box-shadow: inset 0px 0px 0px white;
 }
 
 nav ul:last-child li a:hover {
     background: none;
-    box-shadow: inset 0px 0px 5px 1px #00FF88;
-    color: #00FF88;
+    box-shadow: inset 0px -2px 0px white;
+    color: white;
 }
 
 nav ul:last-child li:first-child a {
@@ -245,3 +245,5 @@ nav ul:first-child li {
         width: 90%;
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
